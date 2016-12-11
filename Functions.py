@@ -40,9 +40,9 @@ def get_number_per_island(game, island_object, aircraft_object, city_object):
     """
 
     number = 100
-    number = number - aircraft_object.distance(aircraft_object)
-    number = number - city_object.distance(island_object)
-    number = number - (len(get_enemy_pirates_in_range(2, island_object.get_location)) * 10)
+    number -= aircraft_object.distance(aircraft_object)
+    number -= city_object.distance(island_object)
+    number -= (len(get_enemy_pirates_in_range(2, island_object.get_location)) * 10)
     if get_enemy_pirates_in_range(2, island_object) >= 3:
         return -100
     return number
