@@ -1,3 +1,2 @@
-
-def do_turn(pirates):
+def do_turn(game):
     pass

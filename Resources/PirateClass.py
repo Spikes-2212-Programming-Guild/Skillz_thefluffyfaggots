@@ -2,14 +2,14 @@
 This class contains the most basic Pirate class, both the engine Pirate class and the PythonRunner Pirate class inherit
 from it.
 """
-import Aircraft
+from Resources import Aircraft
 
 # enable type hinting without causing a real circular imports loop
 # WARNING: THIS DOES NOT ACTUALLY IMPORT THESE CLASSES. EVER!
 if __name__ == '__main__':
-    import LocationClass
-    import MapObject
-    import PlayerClass
+    from Resources import LocationClass
+    from Resources import MapObject
+    from Resources import PlayerClass
 
 
 class BasePirate(Aircraft.Aircraft):
