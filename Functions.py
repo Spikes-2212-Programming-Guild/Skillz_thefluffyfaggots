@@ -24,3 +24,22 @@ def get_enemies_in_range(game, radius, location):
             enemies_in_range.append(enemy)
 
     return enemies_in_range
+
+
+def route_danger(game, route, pirate):
+    """
+
+    :param game: game object
+    :type game: PirateGame
+    :param route: list of points
+    :type route: list
+    :param pirate:
+    :return:
+    """
+    final_danger = 0
+    for location_tuple in enumerate(route):
+        danger = get_danger_level(game, location_tuple[1])
+        danger_distance = danger * (0.8 ** location_tuple[0])
+        final_danger += danger_distance
+
+    return final_danger
