@@ -33,6 +33,5 @@ def get_list_priority(game, id_aircraft, id_city):
          get_number_per_island(game, game.get_all_islands[1], id_aircraft, id_city),
          get_number_per_island(game, game.get_all_islands[2], id_aircraft, id_city),
          get_number_per_island(game, game.get_all_islands[3], id_aircraft, id_city)]
-    l.sort()
     return l
     pass
