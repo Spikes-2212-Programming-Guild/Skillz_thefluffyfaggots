@@ -1,4 +1,5 @@
 from Resources.LocationClass import Location
+from Resources.Pirates import PirateGame
 
 
 def get_danger_level(game, location):
@@ -6,12 +7,13 @@ def get_danger_level(game, location):
 
     :param location: location of point
     :type location: Location
+    :type game: PirateGame
     :return: danger level of given point
     """
 
     danger = 0
     for enemy in game.get_enemy_living_pirates():
-        danger += enemy.MapObject.distance(location)
+        danger += enemy.distance(location)
     return danger
 
 
